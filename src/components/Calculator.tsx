@@ -23,9 +23,15 @@ const Calculator = () => {
             <h1>Square of Sum</h1>
             <form action={calculateAction}>
                 <span>{'( '}</span>
-                <input type='number' name='first-number' />
+                <label>
+                    First number:
+                    <input type='number' name='first-number' />
+                </label>
                 <span>+</span>
-                <input type='number' name='second-number' />
+                <label>
+                    Second number:
+                    <input type='number' name='second-number' />
+                </label>
                 <span>{' )'}&sup2;</span>
                 <br /><br />
                 <button type='submit'>Calculate square of sum</button>
