@@ -9,13 +9,10 @@ const App = () => {
     const [activeTab, setActiveTab] = useState('square-of-sum');
     const [activeButtons, setActiveButtons] = useState(['cat-pics']);
 
-
     const handleClick = (event) => {
         const selectedButton = event.currentTarget.id;
         setActiveTab(selectedButton);
-        if (tabButtons.find(button => button === selectedButton)) {
-            setActiveButtons(tabButtons.filter(button => button !== selectedButton));
-        };
+        setActiveButtons(tabButtons.filter(button => button !== selectedButton));
     };
 
     return (
