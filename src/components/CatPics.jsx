@@ -19,20 +19,10 @@ const CatPics = () => {
         });
 
         const body = await res.json();
-        setImageUrl(body.catUrl ?? '');
-        setIsLoading(false);
 
-        if (letter === 'f') {
-            setSubtitle('that\'s not very nice');
-        } else if (letter === 'l') {
-            setSubtitle('the gainz');
-        } else if (letter === 'gy') {
-            setSubtitle('sheeeeesh');
-        } else if (letter === 'x') {
-            setSubtitle('that doesn\'t look right...');
-        } else {
-            setSubtitle('');
-        }
+        setImageUrl(body.catUrl ?? '');
+        setSubtitle(body.catUrl ? body.subtitle ?? '' : 'that doesn\'t look right...')
+        setIsLoading(false);
     };
 
     return (
