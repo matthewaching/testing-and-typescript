@@ -15,8 +15,8 @@ test('input fields accept input', async () => {
     const user = userEvent.setup();
     render(<Calculator />);
 
-    const firstInput = await screen.findByLabelText(/First number/i);
-    const secondInput = await screen.findByLabelText(/Second number/i);
+    const firstInput = await screen.findByPlaceholderText(/First number/i);
+    const secondInput = await screen.findByPlaceholderText(/Second number/i);
     const calculateButton = await screen.findByRole('button', { name: /Calculate square of sum/i });
 
     await user.type(firstInput, '1');
