@@ -8,7 +8,7 @@ const CatPics = () => {
     const [subtitle, setSubtitle] = useState('');
     const [isLoading, setIsLoading] = useState(false);
 
-    const swapLetter = async (event) => {
+    const swapLetter = async (event: React.MouseEvent) => {
         const letter = event.currentTarget.id ?? '';
         setIsLoading(true);
         setSelectedLetter(letter || '_');
